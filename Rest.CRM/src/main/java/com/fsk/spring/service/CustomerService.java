@@ -1,12 +1,12 @@
-package com.fsk.spring.dao;
+package com.fsk.spring.service;
 
 import java.util.List;
 
 import com.fsk.spring.entity.Customer;
 
-public interface CustomerDao {
-
-	public List<Customer> listCustomer();
-
+public interface CustomerService {
+	
+	public List<Customer> listCustomers();
+	
 	public Customer getCustomer(int customerId);
 }
