@@ -25,4 +25,19 @@ public class CustomerServiceImpl implements CustomerService {
 		return customer.getCustomer(customerId);
 	}
 
+	@Transactional
+	public int addCustomer(Customer c) {
+		return customer.addCustomer(c);
+	}
+
+	@Transactional
+	public void updateCustomer(Customer c) {
+		customer.updateCustomer(c);
+	}
+
+	@Transactional
+	public void deleteCustomer(int customerId) {
+		customer.deleteCustomer(customerId);
+	}
+
 }

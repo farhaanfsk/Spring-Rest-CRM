@@ -26,4 +26,22 @@ public class CustomerDaoImpl implements CustomerDao {
 		return session.get(Customer.class, customerId);
 	}
 
+	@Override
+	public int addCustomer(Customer c) {
+		Session session = sessionFactory.getCurrentSession();
+		return (int) session.save(c);
+	}
+
+	@Override
+	public void updateCustomer(Customer c) {
+		Session session = sessionFactory.getCurrentSession();
+		session.update(c);
+	}
+
+	@Override
+	public void deleteCustomer(int customerId) {
+		Session session = sessionFactory.getCurrentSession();
+		session.delete(session.get(Customer.class, customerId));
+	}
+
 }
